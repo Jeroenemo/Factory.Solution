@@ -7,7 +7,9 @@
 <h1>Machine Details</h1>
 <hr />
 <h2>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h2>
-<h2>@Html.DisplayNameFor(model => model.InstallDate): @Html.DisplayFor(model => model.InstallDate)</h2>
+<hr />
+<h2>@Html.Label("Install Date"): @Html.DisplayFor(model => model.InstallDate)</h2>
+<hr />
 
 @if (@Model.JoinEntities.Count == 0)
 {
@@ -31,13 +33,15 @@ else
     }
   </ul>
 }
+<hr />
+<tr>
+<td>@Html.ActionLink("Assign to an Engineer", "AddEngineer", new { id = Model.MachineId })</td> |
 
-<p>@Html.ActionLink("Assign to an Engineer", "AddEngineer", new { id = Model.MachineId })</p>
+<td>@Html.ActionLink("Edit Machine", "Edit", new { id = Model.MachineId })</td> |
 
-<p>@Html.ActionLink("Edit Machine", "Edit", new { id = Model.MachineId })</p>
+<td>@Html.ActionLink("Delete Machine", "Delete", new { id = Model.MachineId })</td> |
 
-<p>@Html.ActionLink("Delete Machine", "Delete", new { id = Model.MachineId })</p>
+<td>@Html.ActionLink("Back to Machines", "Index")</td> |
 
-<p>@Html.ActionLink("Back to Machines", "Index")</p>
-
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<td>@Html.ActionLink("Home", "Index", "Home")</td>
+</tr>
