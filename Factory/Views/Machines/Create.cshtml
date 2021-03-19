@@ -9,7 +9,11 @@
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name, new { required = "required" })
+
+  @Html.Label("Install Date")
+  @Html.EditorFor(model => model.InstallDate, new { @type = "date" })
+
   <input type="submit" value="Add" />
 }
 
