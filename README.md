@@ -38,6 +38,7 @@ This is a basic application designed to display my grasp on database basics, usi
 * Run a restore and build command. `dotnet restore` and `dotnet build`
 
 **Set up the Database:**
+
 * You need to have MySqlWorkbench installed on your machine. You can download it [here](https://www.mysql.com/products/workbench/)
 * In the navigator > Administration window, select Data Import/Restore
 * In Import Options select Import from Self-Contained File.
@@ -47,6 +48,10 @@ This is a basic application designed to display my grasp on database basics, usi
 * Click ok
 * Click Start Import
 * Reopen the Navigator > Schemas tab. Right click and select Refresh All. 
+
+*Alternatively, install the enitity framework migrations tool by running the following comand `dotnet tool install --global dotnet-ef`
+*In Factory.Solution > Factory, run `dotnet ef database update`
+*Voila! 
 
 **Run the Application**
 * Back in your terminal, in the Factory.Solution > Factory directory, type `dotnet run`
