@@ -9,9 +9,13 @@
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.MachineId)
+  @Html.HiddenFor(model => model.InstallDate)
 
   @Html.LabelFor(model => model.Name)
   @Html.EditorFor(model => model.Name)
+
+  @Html.Label("Install Date")
+  @Html.EditorFor(model => model.InstallDate, new { @type = "date" })
 
   <input type="submit" value="Save" />
 }
