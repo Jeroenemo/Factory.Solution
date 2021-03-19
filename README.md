@@ -34,7 +34,7 @@ This is a basic application designed to display my grasp on database basics, usi
             "DefaultConnection": "Server=localhost;Port=3306;database=[YOUR DATABASE];uid=root;pwd=[YOUR PASSWORD];"
         }
     }
-* Please note that the variables in brackets needs to be replaced with your own database name and password.
+* Please note that the variables in brackets need to be replaced with your own database name and password.
 * Run a restore and build command. `dotnet restore` and `dotnet build`
 
 **Set up the Database:**
