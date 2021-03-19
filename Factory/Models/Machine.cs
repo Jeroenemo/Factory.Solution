@@ -10,9 +10,12 @@ namespace Factory.Models
     {
       this.JoinEntities = new HashSet<EngineerMachine>();
     }
-
     public int MachineId { get; set; }
     public string Name { get; set; }
+
+    [DataType(DataType.Date)]
+    [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+    public DateTime InstallDate { get; set; }
     public virtual ICollection<EngineerMachine> JoinEntities { get; }
   }
 }
